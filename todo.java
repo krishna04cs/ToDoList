@@ -4,25 +4,21 @@ import java.awt.event.*;
 
 public class ToDoList extends JFrame {
 
-    // instance Variables
+   
     private JList<String> list;
     private DefaultListModel<String> listModel;
     private JTextField taskField;
     private JButton addButton, deleteButton;
-    private String[] emojis = { "😇", "😈", "😎", "😡", "🤠", "🤡", "😦", "😰", "😱", "🙄", "🤔", "😒",
-            "😀", "😅", "🙃", "🙂", "😌", "💀", "😘", "👿", "💩", "👽", "😼" };
+   
 
     public ToDoList() {
 
-        // ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("todo_1.png"));
-        // setIconImage(img.getImage());
-
-        // Frame properties
+      
         setTitle("Todo List");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(900, 600);
 
-        // for adding todos
+      
         listModel = new DefaultListModel<>();
         list = new JList<>(listModel);
         JScrollPane scrollPane = new JScrollPane(list);
@@ -30,7 +26,7 @@ public class ToDoList extends JFrame {
         taskField = new JTextField();
         addButton = new JButton("Add Task");
 
-        // Add Button and its Functionalty
+       
         addButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String task = taskField.getText();
